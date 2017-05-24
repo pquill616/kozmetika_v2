@@ -42,14 +42,14 @@ function mobileList() {
 	}
 }
 function hideNavBar(){
-	var li = document.querySelectorAll('header > nav > ul li');
+	var li = document.querySelectorAll('header > nav > ul li>a');
 	for(i of li){
 		i.onclick = function() {
 			console.log(this);
 			setTimeout(function() {
 				document.querySelector(".mobile-nav").parentNode.classList.toggle("open");
 				accordionClose();
-			}, 1000);
+			}, 10);
 		}
 	}
 }
@@ -68,7 +68,7 @@ window.onload = function() {
 	mobileNav();
 	accordionOpener();
 	mobileList();
-	//hideNavBar();
+	hideNavBar();
 	
 	
 }
