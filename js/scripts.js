@@ -41,12 +41,31 @@ function mobileList() {
 		document.querySelector("header > nav > ul").style.width = window.innerWidth+'px';
 	}
 }
+function hideNavBar(){
+	var li = document.querySelectorAll('header > nav > ul li');
+	for(i of li){
+		i.onclick = function() {
+		document.querySelector(".mobile-nav").parentNode.classList.toggle("open");
+		accordionClose();
+		}
+	}
+}
+function fixHeader() {
+	var header = document.querySelector('body > header');
+	header.onscroll = function() {
+		if(window.scrollY > 30) {
+			header.classList.toggle("scroll");
+		}
+	}
+}
 window.onload = function() {
 	resizeBG();
 	createAccordion();
 	mobileNav();
 	accordionOpener();
 	mobileList();
+	hideNavBar();
+	fixHeader();
 	
 }
 window.onresize = function() {
