@@ -57,10 +57,12 @@ header {
     left: 0;
     font-size: 0;
     position: fixed;
+    transition: all 0.5s ease-out;
 }
 header.scroll {
-    background: rgba(255,220,255,0.3);
-    top: 5px;
+    background: rgba(255,220,255,0.55);
+    top: 0px;
+    box-shadow: 0 0px 60px -10px #555;
 }
 
 header h1.title {
@@ -92,36 +94,6 @@ nav> ul li {
     transition: all 0.4s ease;
 }
 
-
-/*
-nav> ul > li a {
-display: inline-block;
-font-size: 16px;
-text-decoration: none;
-font-weight: 800;
-width: 100%;
-height: 100%;
-line-height: 45px;
-color: #fff;
-}
-
-nav> ul> li> ul {
-visibility: hidden;
-opacity: 0;
-font-size: 0;
-width: 100%;
-display: block;
-position: absolute;
-top: 45px;
-left: 0;
-background: rgba(255,255,255,0.5);
-transition: all 0.4s ease;
-transform: scale(0);	
-}
-nav> ul> li> ul > li a{
-color: #121212;
-}
-*/
 
 
 /* main */
@@ -194,7 +166,7 @@ main .content-body {
         visibility: hidden;
         opacity: 0;
         position: absolute;
-        top: 25px;
+        top: 35px;
         right: -768px;
         transition: all 0.8s ease;
     }
@@ -209,7 +181,7 @@ main .content-body {
         z-index: 1;
         overflow: hidden;
         border-bottom: 1px solid rgba(100,0,100,0.5);
-        background: #fe94fe;
+        background: rgba(255,200,255,0.7);
     }
     nav> ul> li:last-child {
         border-bottom: none;
@@ -221,17 +193,18 @@ main .content-body {
         box-shadow: inset 0px 0px 20px -4px black;
     }
     nav> ul> li.open {
-        background: #e485e4;
+        background: rgba(201,12,201, 0.5);
     }
     nav> ul> li.open> ul {
         height: auto;
-        background: #FED4FE;
+        background: rgba(254,212,254,0.5);
     }
     header nav ul li {
         display: block;
         width: 100%;
         height: auto;
         transition: background 0.8s ease-in-out;
+        overflow: hidden;
     }
     nav> ul > li a {
         display: block;
@@ -317,7 +290,7 @@ main .content-body {
     }
     li.open .accordion span {
         transform: rotate(135deg);
-        background: #e50000;
+        background: #ffddff;
     }
     .accordion span:nth-child(2) {
         width: 16px;

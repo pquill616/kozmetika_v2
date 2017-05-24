@@ -29,9 +29,9 @@ function accordionClose() {
 	}
 }
 function accordionOpener() {
-	var acc = document.querySelectorAll(".accordion");
-	for(var i = 0;i<acc.length;i++){
-		acc[i].onclick = function() {
+	var acc = document.querySelectorAll("header > nav > ul li > .accordion");
+	for(i of acc){
+		i.onclick = function() {
 		this.parentNode.classList.toggle("open");
 		} 
 	}
@@ -45,17 +45,21 @@ function hideNavBar(){
 	var li = document.querySelectorAll('header > nav > ul li');
 	for(i of li){
 		i.onclick = function() {
-		document.querySelector(".mobile-nav").parentNode.classList.toggle("open");
-		accordionClose();
+			console.log(this);
+			setTimeout(function() {
+				document.querySelector(".mobile-nav").parentNode.classList.toggle("open");
+				accordionClose();
+			}, 1000);
 		}
 	}
 }
 function fixHeader() {
 	var header = document.querySelector('body > header');
-	header.onscroll = function() {
-		if(window.scrollY > 30) {
-			header.classList.toggle("scroll");
-		}
+	if(window.scrollY > 30) {
+		header.classList.add("scroll");
+	}
+	else {
+		header.classList.remove("scroll");
 	}
 }
 window.onload = function() {
@@ -64,15 +68,17 @@ window.onload = function() {
 	mobileNav();
 	accordionOpener();
 	mobileList();
-	hideNavBar();
-	fixHeader();
+	//hideNavBar();
+	
 	
 }
 window.onresize = function() {
 	resizeBG();
 	mobileList();
 }
-
+window.onscroll = function() {
+	fixHeader();
+}
 
 
 
