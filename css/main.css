@@ -58,6 +58,10 @@ header {
     font-size: 0;
     position: fixed;
 }
+header.scroll {
+    background: rgba(255,220,255,0.3);
+    top: 5px;
+}
 
 header h1.title {
     font-family: 'Indie Flower', cursive;
