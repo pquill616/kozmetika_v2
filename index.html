@@ -15,7 +15,7 @@
 </head>
 <body>
 	<header>
-		<h1 class="title"><a href="#">Erika fodrászat</a></h1>
+		<h1 class="title"><a href="#fooldal">Erika fodrászat</a></h1>
 		<nav>
 			<div class="mobile-nav">
 				<span></span>
@@ -27,26 +27,33 @@
 				<li><a href="#kozmetika">Kozmetika</a>
 					<ul>
 						<li><a href="#kozmetika-arlista">Árlista</a></li>
-						<li><a href="#">Kezelések</a></li>
+						<li><a href="#kozmetika-kezelesek">Kezelések</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Fodrászat</a>
+				<li><a href="#fodraszat">Fodrászat</a>
 					<ul>
-						<li><a href="#">Árlista</a></li>
+						<li><a href="#fodraszat-arlista">Árlista</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Kapcsolat</a></li>
+				<li><a href="#kapcsolat">Kapcsolat</a>
+					<ul>
+						<li><a href="#">Térkép</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<div id=fooldal class="background bg-1"></div>
-		<div id=kozmetika class="background bg-2">
+		<div id="fooldal" class="background bg-1 active"></div>
+		<div id="kozmetika" class="background bg-2">
 			<div class="text-box kozmetika">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum metus tempus semper euismod. Quisque facilisis hendrerit tortor, consequat tincidunt dui ultrices sed. Aenean fringilla nisi eget dolor mattis, in eleifend mi maximus. Aliquam erat volutpat. Integer maximus sed sem ac facilisis. In sagittis tempor lacinia.</p>
 			</div>
 		</div>
-		<div id=kozmetika-arlista class="background karlista"></div>
+		<div id="kozmetika-arlista" class="background bg-3"></div>
+		<div id="fodraszat" class="background bg-4"></div>
+		<div id="fodraszat-arlista" class="background bg-5"></div>
+		<div id="kapcsolat" class="background bg-6"></div>
 		
 
 	</main>
@@ -54,5 +61,8 @@
 	</footer>
 	
 	<script src="js/scripts.js"></script>
+	<script type="text/javascript">
+		changePage(location);
+	</script>
 </body>
 </html>
