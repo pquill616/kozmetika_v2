@@ -59,7 +59,8 @@ footer {
     margin: 0;
     padding: 0;
     position: relative;
-	left: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 header {
     height: 70px;
@@ -76,6 +77,10 @@ footer {
     height: 50px;
     background: #050505;
     top: 70px;
+    padding: 15px;
+}
+footer a {
+	color: #ddd;
 }
 
 /* header */
@@ -118,8 +123,18 @@ nav> ul li {
 }
 
 	/* main */
-table tr:nth-child(odd) {
+table tbody tr:nth-child(odd) {
 	background: rgba(130,130,130,0.4);
+}
+table thead tr {
+    background: #8f008f;
+}
+table td:nth-child(2),
+table td:nth-child(3) {
+	text-align: right;
+}
+table td {
+	padding: 10px;
 }
 main {
     top: 70px;
@@ -132,11 +147,13 @@ main .background {
     background-repeat: no-repeat;
     position: relative;
     background-attachment: fixed;
+    overflow: hidden;
 }
 main .background.active {
     display: block;
 	
 }
+footer a:hover,
 .text-box a {
 	text-decoration: underline;
 	color: #f0b2f0;
@@ -147,7 +164,8 @@ main .background.active {
 main .text-box {
     position: relative;
     top: 0px;
-    background: rgba(30,30,30, 0.5);
+    background: rgba(30,30,30, 0.7);
+    min-height: 260px;
     width: 100%;
     padding: 5px 20px 20px;
     box-sizing: border-box;
@@ -158,6 +176,10 @@ main .text-box p {
     color: #ddd;
     text-align: justify;
 	line-height: 26px;
+}
+main .text-box img {
+    max-width: 100%;
+    margin: 10px 0;
 }
 main .text-box.kozmetika {
 	color: #ddd;
@@ -175,7 +197,7 @@ main .text-box.kozmetika {
 
 /* fooldal*/
 .background.bg-1 {
-    background-image: url("../images/bg-2.jpg");
+    background-image: url("../images/bg-3.jpg");
 }
 /* kozmetika */
 .background.bg-2 {
@@ -185,6 +207,9 @@ main .text-box.kozmetika {
 /* kozmetika-kezelesek */
 /* fodraszat */
 /* fodraszat-arlista */
+#fodraszat-arlista h1 {
+	color: #ffddff;
+}
 /* kapcsolat */
 #kapcsolat h1 {
 	flex: 1 0 100%;
@@ -199,16 +224,7 @@ main .text-box.kozmetika {
 #kapcsolat {
 	color: #ffddff;
 }
-#kapcsolat .text-box {
-    min-height: 260px;
-	background: rgba(30,30,30, 0.7);
-}
-#kapcsolat table td {
-	padding: 10px;
-}
-#kapcsolat table td:nth-child(2) {
-	text-align: right;
-}
+
 #kapcsolat table {
 	width: 100%;
 }
@@ -234,6 +250,9 @@ main .text-box.kozmetika {
 }
 .map a:before  {
     background: url("../images/google-maps.png") center center no-repeat;
+}
+.nyitvatartas .today {
+	background: #353535;
 }
 /* impresszum */
 

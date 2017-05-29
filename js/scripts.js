@@ -73,6 +73,28 @@ function fixHeader() {
 		header.classList.remove("scroll");
 	}
 }
+function greeting(){
+	var greet = ["Jó reggelt, ", "Szép napot, ", "Jó estét, "];
+	var opening = ["7:30-13:00-ig", "13:00-19:00-ig", "7:30-13:00-ig", "13:00-19:00-ig", "7:30-13:00-ig", "Zárva", "Zárva"];
+	var greetingText = "";
+	var hours = new Date().getHours();
+	var day = new Date().getDay();
+	if(5 <= hours && hours < 12){
+		greetingText += greet[0];
+	}
+	else if(12 <= hours && hours < 18) {
+		greetingText += greet[1];
+	}
+	else {
+		greetingText += greet[2];
+	}
+		
+	greetingText += "ma " + opening[day-1] + " vagyunk!";
+	document.querySelector(".greeting").innerText = greetingText;
+	document.querySelectorAll(".nyitvatartas tr")[day-1].classList.add("today");
+	
+}
+	greeting();
 window.onload = function() {
 	//resizeBG();
 	createAccordion();
