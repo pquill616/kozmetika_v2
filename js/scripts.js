@@ -7,10 +7,10 @@ function createAccordion() {
 	}
 }
 function resizeBG() {
-	var bg = document.querySelectorAll(".background");
-	for(i of bg){
-		i.style.height = window.outerHeight+"px";
-	}	
+	var inner = document.createElement("style");
+	var style = "#fooldal { height: "+window.innerHeight+"px;}";
+	inner.innerHTML = (style);
+	document.appendChild(inner);
 	document.querySelector("header > nav> ul").style.maxHeight = (window.innerHeight-55)+"px";
 	
 }
@@ -57,7 +57,6 @@ function changePage(e) {
 function hideNavBar(z){	
 	for(i of z){
 		i.onclick = function() {
-			changePage(this);
 			setTimeout(function() {
 				document.querySelector(".mobile-nav").parentNode.classList.remove("open");
 				accordionClose();
@@ -75,7 +74,7 @@ function fixHeader() {
 	}
 }
 window.onload = function() {
-	resizeBG();
+	//resizeBG();
 	createAccordion();
 	mobileNav();
 	accordionOpener();
@@ -88,11 +87,14 @@ window.onload = function() {
 	
 }
 window.onresize = function() {
-	resizeBG();
+	//resizeBG();
 	mobileList();
 }
 window.onscroll = function() {
 	fixHeader();
+}
+window.onhashchange = function() {
+    changePage(location);
 }
 
 
