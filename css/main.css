@@ -459,13 +459,13 @@ main .text-box.kozmetika {
     }
     nav.open .mobile-nav span:nth-child(2) {
         -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-        background: red;
+        transform: rotate(45deg);
+        background: #777;
     }
     nav.open .mobile-nav span:nth-child(3) {
         -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        background: red;
+        transform: rotate(-45deg);
+        background: #555;
     }
     nav.open .mobile-nav span:nth-child(1),
     nav.open .mobile-nav span:nth-child(4) {

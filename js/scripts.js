@@ -52,7 +52,7 @@ function changePage(e) {
 		document.querySelector(".background.active").classList.remove("active");
 		setTimeout(function() {
 			document.getElementById(current).classList.add("active");
-		}, 500);
+		}, 200);
 	}
 }
 function hideNavBar(z){	
@@ -61,7 +61,7 @@ function hideNavBar(z){
 			setTimeout(function() {
 				document.querySelector(".mobile-nav").parentNode.classList.remove("open");
 				accordionClose();
-			}, 2000);
+			}, 200);
 		});
 	}
 }
@@ -96,9 +96,9 @@ function greeting(){
 	
 }
 	greeting();
-	mobileNav();
 window.onload = function() {
 	//resizeBG();
+	mobileNav();
 	createAccordion();
 	accordionOpener();
 	mobileList();
@@ -119,11 +119,3 @@ window.onscroll = function() {
 window.onhashchange = function() {
     changePage(location);
 }
-
-
-
-
-
-
-
-
