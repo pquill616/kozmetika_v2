@@ -128,6 +128,7 @@ table tbody tr:nth-child(odd) {
 }
 table thead tr {
     background: #8f008f;
+	font-weight: bold;
 }
 table td:nth-child(2),
 table td:nth-child(3) {
@@ -207,8 +208,14 @@ main .text-box.kozmetika {
 /* kozmetika-kezelesek */
 /* fodraszat */
 /* fodraszat-arlista */
-#fodraszat-arlista h1 {
-	color: #ffddff;
+#fodraszat-arlista  {
+	color: #353535;
+}
+#fodraszat-arlista .text-box {
+	background: rgba(30,30,30, 0.1);
+}
+#fodraszat-arlista table thead tr{
+	color: #f5f5f5;
 }
 /* kapcsolat */
 #kapcsolat h1 {
@@ -224,7 +231,6 @@ main .text-box.kozmetika {
 #kapcsolat {
 	color: #ffddff;
 }
-
 #kapcsolat table {
 	width: 100%;
 }

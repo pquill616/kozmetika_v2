@@ -75,7 +75,7 @@ function fixHeader() {
 }
 function greeting(){
 	var greet = ["Jó reggelt, ", "Szép napot, ", "Jó estét, "];
-	var opening = ["7:30-13:00-ig", "13:00-19:00-ig", "7:30-13:00-ig", "13:00-19:00-ig", "7:30-13:00-ig", "Zárva", "Zárva"];
+	var opening = ["7:30-13:00-ig nyitva", "13:00-19:00-ig nyitva", "7:30-13:00-ig nyitva", "13:00-19:00-ig nyitva", "7:30-13:00-ig nyitva", "zárva", "zárva"];
 	var greetingText = "";
 	var hours = new Date().getHours();
 	var day = new Date().getDay();
