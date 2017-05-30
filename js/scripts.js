@@ -61,7 +61,7 @@ function hideNavBar(z){
 			setTimeout(function() {
 				document.querySelector(".mobile-nav").parentNode.classList.remove("open");
 				accordionClose();
-			}, 500);
+			}, 2000);
 		});
 	}
 }
