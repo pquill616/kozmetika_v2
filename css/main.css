@@ -330,7 +330,7 @@ main .text-box.kozmetika {
 
 /* TABLET */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 801px) {
 	header {
     background: #f5f5f5;
     top: 0px;
