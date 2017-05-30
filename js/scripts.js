@@ -52,7 +52,7 @@ function changePage(e) {
 		document.querySelector(".background.active").classList.remove("active");
 		setTimeout(function() {
 			document.getElementById(current).classList.add("active");
-		}, 50);
+		}, 500);
 	}
 }
 function hideNavBar(z){	
@@ -61,7 +61,7 @@ function hideNavBar(z){
 			setTimeout(function() {
 				document.querySelector(".mobile-nav").parentNode.classList.remove("open");
 				accordionClose();
-			}, 10);
+			}, 500);
 		});
 	}
 }
