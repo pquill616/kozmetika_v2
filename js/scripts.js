@@ -52,7 +52,7 @@ function changePage(e) {
 		document.querySelector(".background.active").classList.remove("active");
 		setTimeout(function() {
 			document.getElementById(current).classList.add("active");
-		}, 200);
+		}, 80);
 	}
 }
 function hideNavBar(z){	
