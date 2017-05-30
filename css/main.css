@@ -305,7 +305,7 @@ main .text-box.kozmetika {
 /* Responsive */
 
 /* DESKTOP */
-/*
+
 @media all and (min-width: 769px) {
     nav> ul > li:hover {
         background: rgba(255, 210, 255, 0.4);
@@ -326,11 +326,11 @@ main .text-box.kozmetika {
                 transform: scale(1);
     }
 }
-*/
+
 
 /* TABLET */
 
-@media all and (max-width: 801px) {
+@media all and (max-width: 768px) {
 	header {
     background: #f5f5f5;
     top: 0px;

@@ -1,3 +1,4 @@
+var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 function createAccordion() {
 	var ul = document.querySelectorAll("nav> ul >li >ul");
 	var accordion = "<div class='accordion'>\n\t<span></span>\n\t<span></span>\n</div>";
@@ -15,10 +16,10 @@ function resizeBG() {
 	
 }
 function mobileNav() {
-	document.querySelector(".mobile-nav").onclick = function() {
+	document.querySelector(".mobile-nav").addEventListener(touchEvent, function() {
 		this.parentNode.classList.toggle("open");
 		accordionClose();
-	}
+	});
 }
 function accordionClose() {
 	var acc = document.querySelectorAll(".accordion");
@@ -31,17 +32,17 @@ function accordionClose() {
 function accordionOpener() {
 	var acc = document.querySelectorAll("header > nav > ul li > .accordion");
 	for(i of acc){
-		i.onclick = function() {
+		i.addEventListener(touchEvent, function() {
 			var accOpen = document.querySelector("header > nav > ul li.open");
 			if(accOpen && accOpen !== this.parentNode) {
 				accOpen.classList.remove("open");
 			}
 			this.parentNode.classList.toggle("open");
-		} 
+		}); 
 	}
 }
 function mobileList() {
-	if(/*window.innerWidth < 769 && */document.querySelector("header > nav > ul")) {
+	if(window.innerWidth < 769 && document.querySelector("header > nav > ul")) {
 		document.querySelector("header > nav > ul").style.width = window.innerWidth+'px';
 	}
 }
@@ -56,12 +57,12 @@ function changePage(e) {
 }
 function hideNavBar(z){	
 	for(i of z){
-		i.onclick = function() {
+		i.addEventListener(touchEvent, function() {
 			setTimeout(function() {
 				document.querySelector(".mobile-nav").parentNode.classList.remove("open");
 				accordionClose();
 			}, 10);
-		}
+		});
 	}
 }
 function fixHeader() {
@@ -95,10 +96,10 @@ function greeting(){
 	
 }
 	greeting();
+	mobileNav();
 window.onload = function() {
 	//resizeBG();
 	createAccordion();
-	mobileNav();
 	accordionOpener();
 	mobileList();
 	var li = document.querySelectorAll('header > nav > ul li>a');
