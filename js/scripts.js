@@ -41,7 +41,7 @@ function accordionOpener() {
 	}
 }
 function mobileList() {
-	if(window.innerWidth < 769 && document.querySelector("header > nav > ul")) {
+	if(/*window.innerWidth < 769 && */document.querySelector("header > nav > ul")) {
 		document.querySelector("header > nav > ul").style.width = window.innerWidth+'px';
 	}
 }
