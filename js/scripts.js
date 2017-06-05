@@ -76,7 +76,7 @@ function fixHeader() {
 }
 function greeting(){
 	var greet = ["Jó reggelt, ", "Szép napot, ", "Jó estét, "];
-	var opening = ["7:30-13:00-ig nyitva", "13:00-19:00-ig nyitva", "7:30-13:00-ig nyitva", "13:00-19:00-ig nyitva", "7:30-13:00-ig nyitva", "zárva", "zárva"];
+	var opening = ["zárva", "7:30-13:00-ig nyitva", "13:00-19:00-ig nyitva", "7:30-13:00-ig nyitva", "13:00-19:00-ig nyitva", "7:30-13:00-ig nyitva", "zárva"];
 	var greetingText = "";
 	var hours = new Date().getHours();
 	var day = new Date().getDay();
@@ -90,9 +90,11 @@ function greeting(){
 		greetingText += greet[2];
 	}
 		
-	greetingText += "ma " + opening[day-1] + " vagyunk!";
+	greetingText += "ma " + opening[day] + " vagyunk!";
 	document.querySelector(".greeting").innerText = greetingText;
-	document.querySelectorAll(".nyitvatartas tr")[day-1].classList.add("today");
+	day = day-1;
+	day = (7 + day)%7;
+	document.querySelectorAll(".nyitvatartas tr")[day].classList.add("today");
 	
 }
 	greeting();
