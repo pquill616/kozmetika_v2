@@ -1,4 +1,5 @@
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+
 function createAccordion() {
 	var ul = document.querySelectorAll("nav> ul >li >ul");
 	var accordion = "<div class='accordion'>\n\t<span></span>\n\t<span></span>\n</div>";
@@ -42,8 +43,13 @@ function accordionOpener() {
 	}
 }
 function mobileList() {
-	if(window.innerWidth < 769 && document.querySelector("header > nav > ul")) {
-		document.querySelector("header > nav > ul").style.width = window.innerWidth+'px';
+	if(document.querySelector("header > nav > ul")){
+		if(screen.width < 769) {
+			document.querySelector("header > nav > ul").style.width = screen.width+'px';
+		}
+		else if(window.innerWidth < 769) {
+			document.querySelector("header > nav > ul").style.width = window.innerWidth+'px';
+		}	
 	}
 }
 function changePage(e) {
