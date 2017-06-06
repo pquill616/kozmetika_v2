@@ -110,14 +110,14 @@ window.onload = function() {
 	hideNavBar(title);
 	
 	
-}
+};
 window.onresize = function() {
 	//resizeBG();
 	mobileList();
-}
+};
 window.onscroll = function() {
 	fixHeader();
-}
+};
 window.onhashchange = function() {
     changePage(location);
-}
+};
